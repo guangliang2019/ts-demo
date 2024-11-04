@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      shadcn-tabs-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.25rem;
+        border-radius: 0.375rem;
+
+        background-color: hsl(240 3.7% 15.9%);
+        color: hsl(240 5% 64.9%);
+      }
+
+      shadcn-tabs-trigger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        background-color: transparent;
+
+        padding: 0.25rem 0.75rem;
+
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+
+        border-radius: 0.375rem;
+
+        transition: all 0.09s ease-in-out;
+      }
+
+      shadcn-tabs-trigger:hover {
+        color: white;
+      }
+
+      shadcn-tabs-trigger[data-state="active"] {
+        color: white;
+        background-color: hsl(240 10% 3.9%);
+      }
+
+      shadcn-tabs-content {
+        border: 1px solid hsl(240 3.7% 15.9%);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        color: white;
+        background-color: hsl(240 10% 3.9%);
+      }
+    </style>
+  </head>
+  <body>
+    <shadcn-tabs style="margin-left: 1rem" default-value="tab2">
+      <shadcn-tabs-list style="margin-bottom: 0.5rem">
+        <shadcn-tabs-trigger value="tab1">Tab 1</shadcn-tabs-trigger>
+        <shadcn-tabs-trigger value="tab2">Tab 2</shadcn-tabs-trigger>
+        <shadcn-tabs-trigger value="tab3">Tab 3</shadcn-tabs-trigger>
+      </shadcn-tabs-list>
+      <shadcn-tabs-content value="tab1">Content 1</shadcn-tabs-content>
+      <shadcn-tabs-content value="tab2">Content 2</shadcn-tabs-content>
+      <shadcn-tabs-content value="tab3">Content 3</shadcn-tabs-content>
+    </shadcn-tabs>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

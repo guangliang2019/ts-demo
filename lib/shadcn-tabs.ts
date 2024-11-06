@@ -1,9 +1,9 @@
-import "./headless-tabs";
+import "./callback-tabs";
 import {
   HeadlessTabs,
   HeadlessTabsContent,
   HeadlessTabsTrigger,
-} from "./headless-tabs";
+} from "./callback-tabs";
 export class ShadcnTabs extends HeadlessTabs {}
 export class ShadcnTabsTrigger extends HeadlessTabsTrigger {}
 export class ShadcnTabsContent extends HeadlessTabsContent {}

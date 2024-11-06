@@ -18,7 +18,6 @@ export default class HeadlessTabs extends HTMLElement implements TabsProps {
   }
 
   connectedCallback() {
-    console.log("my tabs connected");
     this._defaultValue = this.getAttribute("default-value") || "unset";
     this._value = this._defaultValue;
 
@@ -29,11 +28,11 @@ export default class HeadlessTabs extends HTMLElement implements TabsProps {
       if (event.detail.setChangeTab) {
         event.detail.setChangeTab(this._changeTab);
       }
+      e.stopPropagation();
     });
   }
 
   disconnectedCallback() {
-    console.log("my tabs disconnected");
   }
 }
 

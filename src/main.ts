@@ -1,7 +1,7 @@
 import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import { setupCounter } from "../lib/main";
-import "../lib/callback-tabs";
+import "../lib/headless-tabs";
 import "../lib/shadcn-tabs";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `

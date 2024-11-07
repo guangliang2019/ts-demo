@@ -1,12 +1,12 @@
 import { ProviderProps, RequestContextDetail } from "./interface";
 import { ContextManager } from "./manager";
 
-export default class Provider<T extends Record<string, any>>
+export default abstract class Provider<T extends Record<string, any>>
   extends HTMLElement
   implements ProviderProps<T>
 {
   // _key 一致的 provider 和 consumer 之间可以产生订阅关系
-  protected _key: string = "";
+  protected abstract _key: string;
   get key() {
     return this._key;
   }
@@ -24,7 +24,7 @@ export default class Provider<T extends Record<string, any>>
     return this._setContext;
   }
 
-  protected _contextValue: T = {} as T;
+  protected abstract _contextValue: T;
   get contextValue() {
     return this._contextValue;
   }

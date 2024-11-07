@@ -12,6 +12,7 @@ export class ContextManager {
   private constructor() {
     this._providers = new Map();
     this._consumers = new Map();
+    this._contextListeners = new Map();
   }
 
   static getInstance() {

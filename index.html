@@ -50,11 +50,16 @@
       }
 
       shadcn-tabs-content {
+        display: none;
         border: 1px solid hsl(240 3.7% 15.9%);
         border-radius: 0.5rem;
         padding: 1rem;
         color: white;
         background-color: hsl(240 10% 3.9%);
+      }
+
+      shadcn-tabs-content[data-state="active"] {
+        display: flex;
       }
     </style>
   </head>
